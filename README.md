@@ -1,41 +1,50 @@
-# Juri - Full-Stack Law Publication Platform
+# Juri
 
-## Project Overview
-Juri is a full-stack platform designed for law publication and management. It aims to provide legal professionals and the public with easy access to legal documents, articles, and publications.
+## Tech Stack
+- **Backend:** Python with FastAPI
+- **Frontend:** Next.js
 
-## Features
-- User authentication and authorization
-- Document uploading and management
-- Search functionality for legal documents
-- User-friendly interface for both legal professionals and the public
+## Setup Instructions
 
-## Technology Stack
-- **Frontend:** React.js
-- **Backend:** Node.js, Express.js
-- **Database:** PostgreSQL
+### Prerequisites
+- Python 3.7 or higher
+- Node.js 14 or higher
 
-## Getting Started
-1. Clone the repository:
+### Backend Setup
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/hugorampelberg/juri.git
+   cd juri/backend
    ```
-2. Navigate to the project directory:
+
+2. **Create a virtual environment:**
    ```bash
-   cd juri
+   python -m venv venv
+   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
    ```
-3. Install dependencies:
+
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Run the FastAPI server:**
+   ```bash
+   uvicorn main:app --reload
+   ```
+
+### Frontend Setup
+1. **Navigate to the frontend directory:**
+   ```bash
+   cd ../frontend
+   ```
+
+2. **Install dependencies:**
    ```bash
    npm install
    ```
-4. Start the backend server:
-   ```bash
-   npm run start
-   ```
-5. Start the frontend development server:
-   ```bash
-   cd client
-   npm start
-   ```
 
-## License
-This project is licensed under the MIT License.
+3. **Run the Next.js development server:**
+   ```bash
+   npm run dev
+   ```
